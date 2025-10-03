@@ -168,8 +168,8 @@ ipconfig      # Windows
 **Configuración necesaria:**
 1. **Actualiza** `banking-transaction-system/mobile/rn-txn/src/services/config.ts`:
 ```typescript
-   export const API_BASE_URL = 'http://192.168.1.11:3000';
-   export const WS_BASE_URL = 'http://192.168.1.11:8080'; 
+   export const API_BASE_URL = 'http://tu.ip.local:3000';
+   export const WS_BASE_URL = 'http://tu.ip.local:8080'; 
 ```
 
 2. **Requisitos:**
@@ -177,24 +177,6 @@ ipconfig      # Windows
    - Puertos 3000 y 8080 accesibles
    - Firewall permite conexiones locales
 
-#### **🔧 Archivo de Configuración**
-**Ubicación:** `banking-transaction-system/mobile/rn-txn/src/services/config.ts`
-
-Edita este archivo para configurar las URLs de tu backend según tu método de conexión preferido.
-
-```typescript
-// Para túnel de Expo (automático)
-export const config = {
-  API_BASE_URL: 'http://192.168.1.11:3000',  // Cambia TU_IP_AQUI
-  WS_BASE_URL: 'http://192.168.1.11:8080',   // Cambia TU_IP_AQUI
-};
-
-// Para desarrollo local con IP específica
-export const config = {
-  API_BASE_URL: 'http://192.168.1.100:3000',
-  WS_BASE_URL: 'http://192.168.1.100:8080',
-};
-```
 
 ## 📋 Ciclo de Vida de Transacción
 
