@@ -29,7 +29,7 @@ Mobile App → API → Kafka (txn.commands) → Orchestrator → Kafka (txn.even
 
 ```bash
 cd banking-transaction-system/docker
-docker-compose up -d
+sudo docker-compose up -d
 ```
 
 Esto iniciará:
@@ -167,12 +167,10 @@ ipconfig      # Windows
 
 **Configuración necesaria:**
 1. **Actualiza** `banking-transaction-system/mobile/rn-txn/src/services/config.ts`:
-   ```typescript
-   export const config = {
-     API_BASE_URL: 'http://TU_IP_LOCAL:3000',
-     WS_BASE_URL: 'http://TU_IP_LOCAL:8080',
-   };
-   ```
+```typescript
+   export const API_BASE_URL = 'http://192.168.1.11:3000';
+   export const WS_BASE_URL = 'http://192.168.1.11:8080'; 
+```
 
 2. **Requisitos:**
    - Dispositivo y PC en la **misma red WiFi**
